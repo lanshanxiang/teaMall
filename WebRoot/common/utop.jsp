@@ -1,42 +1,45 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-   <%@include file="/common/taglibs.jsp"%>
- <!--头部-->
- 
-   <div class="width100" style="height:25ox;background:#f0f0f0;">
-	<div class="width1200 center_yh font14 c_66" style="height:25px;line-height:25px;">
-    	<font class="left_yh">欢迎来到网络商城！</font>
-        <div class="right_yh" id="fast_jump">
-        
-            <c:if test="${userId != null }">
-            <a href="#">欢迎您：${username}</a>
-            <b></b>
-             <a href="${ctx}/login/uTui">退出</a>
-            <b></b>
-            
-             <a href="${ctx}/car/findBySql">我的购物车</a>
-             <b></b>
-            
-            </c:if>
-            <c:if test="${userId == null }">
-            <a href="${ctx}/login/uLogin">登录</a>
-            <b></b>
-            <a href="${ctx}/login/res">注册</a>
-            <b></b>
-            </c:if>
-        	
-            <a href="${ctx}/user/view">个人中心</a>
-        </div>
-    </div>
-</div>
-<div class="width100 hidden_yh" >
-	<div class="width1200 center_yh hidden_yh" style="margin-bottom: -0px">
-    	<a href="#" class="block_yh left_yh" style="margin-top:10px;"><img src="${ctx}/resource/images/looo.png" style="height:70px"></a>
-        <div class="right_yh" style="height:28px;width:316px;border:2px solid #dd4545;margin-top:-20px;">
-        	<form action="${ctx}/item/shoplist" method="post">
-                <input type="text" placeholder="关键词查询" class="searCh" name="condition" value="${condition }">
-                <input type="submit" class="btnSearh" value="搜索">
-            </form>
-        </div>
-    </div>
+	pageEncoding="UTF-8"%>
+<%@include file="/common/taglibs.jsp"%>
+
+<div id="top">
+	<div class="top">
+		<div class="Collection">
+			<em></em><a href="#">收藏我们</a>
+		</div>
+		<div class="hd_top_manu clearfix">
+			<ul class="clearfix">
+
+				<c:if test="${userId != null }">
+					<li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！
+						<a href="${ctx}/login/uTui" class="red">${username}</a>
+						<a href="${ctx}/login/uTui" class="red">退出</a>
+				</c:if>
+
+				<c:if test="${userId == null }">
+				<li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！
+					<a href="${ctx}/login/uLogin" class="red">[请登录]</a> 新用户<a href="${ctx}/login/res" class="red">[免费注册]</a>
+				</li>
+				</c:if>
+
+				<li class="hd_menu_tit" data-addclass="hd_menu_hover"><a
+					href="#">我的订单</a></li>
+				<li class="hd_menu_tit" data-addclass="hd_menu_hover"><a
+					href="${ctx}/car/findBySql">购物车(<b>0</b>)
+				</a></li>
+				<li class="hd_menu_tit" data-addclass="hd_menu_hover"><a
+					href="#">联系我们</a></li>
+				<li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a
+					href="#" class="hd_menu">客户服务</a>
+					<div class="hd_menu_list">
+						<ul>
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">在线退换货</a></li>
+							<li><a href="#">在线投诉</a></li>
+							<li><a href="#">配送范围</a></li>
+						</ul>
+					</div></li>
+			</ul>
+		</div>
+	</div>
 </div>
