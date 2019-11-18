@@ -28,7 +28,7 @@
 					href="${ctx}/car/findBySql">购物车(<b>0</b>)
 				</a></li>
 				<li class="hd_menu_tit" data-addclass="hd_menu_hover"><a
-					href="#">联系我们</a></li>
+					href="${ctx}/user/view">个人中心</a></li>
 				<li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a
 					href="#" class="hd_menu">客户服务</a>
 					<div class="hd_menu_list">
@@ -43,3 +43,24 @@
 		</div>
 	</div>
 </div>
+<!--logo和搜索样式-->
+	<div id="header" class="header">
+		<div class="logo">
+			<a href="#"><img src="${ctx}/resource/users/images/logo.png" /></a>
+			<div class="phone">
+				免费咨询热线:<span class="telephone">400-3404-000</span>
+			</div>
+		</div>
+		<div class="Search">
+		<form action="${ctx}/item/shoplist" method="post">
+			<p>
+				<input name="condition" type="text" class="text" value="${condition }"/>
+				<input name="" type="submit" value="" class="Search_btn" />
+			</p>
+			<p class="Words">
+				<a href="#">苹果</a><a href="#">香蕉</a><a href="#">菠萝</a><a href="#">西红柿</a><a
+					href="#">橙子</a><a href="#">苹果</a>
+			</p>
+			</form>
+		</div>
+	</div>
