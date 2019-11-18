@@ -53,7 +53,7 @@ function requestJsonList(){
 		<input type="text"   name="username" />
 		<input type="text"   name="address" />
 		<input type="text"   name="role" />
-		<input  type="button"  value="保存">
+		<input  type="button"    value="保存">
 
 	</body>
 	
