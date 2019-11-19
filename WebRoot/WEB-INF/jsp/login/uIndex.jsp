@@ -41,21 +41,6 @@
 							</c:forEach>
 						</div>
 					</c:forEach>
-					<div class="Menu_list">
-						<div class="menu_title">茶叶价格</div>
-						<a href="#">100以下</a><a href="#">100-200</a><a href="#">200-400</a><a
-							href="#">400-600</a><a href="#">600-900</a><a href="#">1000以上</a>
-					</div>
-					<div class="Menu_list">
-						<div class="menu_title">推荐茶叶</div>
-						<ul class="recommend">
-							<li><a href="#" title="[2015年新茶]巴山雀舌毛尖茶新茶，含硒">[2015年新茶]巴山雀舌...</a></li>
-							<li><a href="#" title="[2015年新茶]巴山雀舌毛尖茶新茶，含硒">[2015年新茶]巴山雀舌...</a></li>
-							<li><a href="#" title="[2015年新茶]巴山雀舌毛尖茶新茶，含硒">[2015年新茶]巴山雀舌...</a></li>
-							<li><a href="#" title="[2015年新茶]巴山雀舌毛尖茶新茶，含硒">[2015年新茶]巴山雀舌...</a></li>
-							<li><a href="#" title="[2015年新茶]巴山雀舌毛尖茶新茶，含硒">[2015年新茶]巴山雀舌...</a></li>
-						</ul>
-					</div>
 				</div>
 			</div>
 			<!--菜单栏-->
