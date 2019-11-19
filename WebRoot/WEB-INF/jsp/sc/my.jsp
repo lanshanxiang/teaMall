@@ -1,88 +1,88 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@include file="/common/taglibs.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+	pageEncoding="UTF-8"%>
+<%@include file="/common/taglibs.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="renderer" content="webkit">
-   <title>个人中心</title>
-	<link rel="stylesheet" type="text/css" href="${ctx}/resource/user/css/style.css">
-	<script src="${ctx}/resource/user/js/jquery-1.8.3.min.js"></script>
-	<script src="${ctx}/resource/user/js/jquery.luara.0.0.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="${ctx}/resource/users/css/css.css" rel="stylesheet"
+	type="text/css" />
+<link href="${ctx}/resource/users/css/common.css" rel="stylesheet"
+	type="text/css" />
+<link href="${ctx}/resource/users/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+<script src="${ctx}/resource/users/js/jquery.min.1.8.2.js"
+	type="text/javascript"></script>
+<script src="${ctx}/resource/users/js/jquery.SuperSlide.2.1.1.js"
+	type="text/javascript"></script>
+<script type="text/javascript" src="${ctx}/resource/users/js/slide.js"></script>
+<script src="${ctx}/resource/users/js/common_js.js"
+	type="text/javascript"></script>
+<script src="${ctx}/resource/users/js/jquery.foucs.js"
+	type="text/javascript"></script>
+<title>我的收藏</title>
 </head>
+
 <body>
-
-
-
-
-
- <%@ include file="/common/utop.jsp" %>
- 
-<!--导航条-->
-<div class="width100" style="height:45px;background:#dd4545;margin-top:40px;position:relative;z-index:100;">
-	<!--中间的部分-->	
-	<div class="width1200 center_yh relative_yh" style="height:45px;">
-        <!--普通导航-->
-        <div class="left_yh font16" id="pageNav">
-        	<a href="${ctx}/login/uIndex">首页</a>
-        </div>
-    </div>
-</div>
-
-<!--当前位置-->
-<div class="width1200 center_yh hidden_yh font14" style="height:40px;line-height:40px;">
-	<span>当前位置:</span><a href="#" class="c_66">首页></a><a href="#" class="c_66">我的账户></a>
-</div>
-<div class="width100 hidden_yh" style="background:#f0f0f0;padding-top:34px;padding-bottom:34px;">
-	<div class="width1200 hidden_yh center_yh">
-    	<div id="vipNav">
-        	<a href="${ctx}/user/view" >个人信息</a>
-            <a href="${ctx}/itemOrder/my">我的订单</a>
-            <a href="${ctx}/sc/findBySql" class="on">商品收藏</a>
-            <a href="${ctx}/login/pass" >修改密码</a>
-        </div>
-        <div id="vipRight">
-            <div class="hidden_yh bj_fff" style="width:938px;border:1px solid #ddd;">
-            	<div class="width100 font24" style="height:60px;line-height:60px;text-indent:50px;background:#f5f8fa;border-bottom:1px solid #ddd;">最近收藏</div>
-                <div class="hidden_yh" style="padding:20px;width:898px;">
-                
-                 <c:forEach items="${pagers.datas}" var="data" varStatus="l">
-                 <!--一条-->
-                 <a href="${ctx}/item/view?id=${data.itemId}">
-                    <div class="width100 hidden_yh" style="border-bottom:1px dashed #ddd;padding-top:10px;padding-bottom:10px;">
-                    	<img src="${data.item.url1}" width="100" height="100" class="left_yh">
-                        <div class="left_yh" style="width:580px;">
-                        	<h3 class="font18 c_33 font100">${data.item.name}</h3>
-                            <p class="red" style="margin-top:10px;">￥${data.item.price}</p>
-                        </div>
-                        <div class="right_yh">
-                            <a href="${ctx}/sc/delete?id=${data.id}" class="onfff block_yh tcenter font16" style="margin-top:10px;padding:6px;">取消收藏</a>
-                        </div>
-                    </div>
-                    </a>
-                    <!--一条-->
-                 
-                 </c:forEach>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	<!--顶部样式-->
+	<%@ include file="/common/utop.jsp"%>
+	<!--导航栏样式-->
+	<%@ include file="/common/umenu.jsp"%>
+	<!--用户中心(收藏)-->
+	<div class="user_style clearfix" id="user">
+		<div class="user_title">
+			<em></em>用户中心
+		</div>
+		<div class="clearfix user">
+			<!--左侧菜单栏样式-->
+			<%@include file="/common/uleft.jsp"%>
+			<!--右侧内容样式-->
+			<div class=" right_style r_user_style user_right">
+				<div class="user_Borders clearfix">
+					<div class="title_name">
+						<span class="name">用户收藏</span>
+					</div>
+					<!--收藏样式-->
+					<div class="Collect">
+						<ul class="Collect_list">
+							<c:forEach items="${pagers.datas}" var="data" varStatus="l">
+								<li>
+									<div class="Collect_pro_name">
+										<a href="#" class="delete_Collect"></a>
+										<p class="img center">
+											<a href="${ctx}/item/view?id=${data.itemId}"><img src="${data.item.url1}" /></a>
+										</p>
+										<p>
+											<a href="${ctx}/item/view?id=${data.itemId}">${data.item.name}</a>
+										</p>
+										<!-- <p class="Collect_Standard">礼盒装</p> -->
+										<p class="Collect_price">￥${data.item.price}</p>
+									</div>
+								</li>
+							</c:forEach>
+						</ul>
+						<!--分页-->
+						<div class="pages_Collect clearfix">
+							<a href="#" class="on">《</a> <a href="#">1</a> <a href="#">2</a>
+							<a href="#">3</a> <a href="#">4</a> <a href="#">》</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footerbox">
+		<!--友情链接-->
+		<div class="Links">
+			<div class="link_title">友情链接</div>
+			<div class="link_address">
+				<a href="#">四川茶叶协会</a> <a href="#">链接地址</a> <a href="#">链接地址</a> <a
+					href="#">链接地址 </a> <a href="#">链接地址</a> <a href="#">链接地址</a> <a
+					href="#">链接地址</a>
+			</div>
+		</div>
+	</div>
+	<!--底部样式-->
+	<%@ include file="/common/udown.jsp"%>
 </body>
-<script type="text/javascript">
-
-$(function(){
-	
-	$(".sub").click(function(){
-		$("#myf").submit();
-		
-		
-	});
-	
-});
-
-</script>
 </html>
