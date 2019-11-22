@@ -282,16 +282,11 @@ public class UserController extends BaseController {
 	@RequestMapping(value = "/exUpdate")
 	public String exUpdate(User user, Model model, HttpServletRequest request, HttpServletResponse response) {
 		//1.通过实体类修改，可以多传修改条件
-		Object attribute = request.getSession().getAttribute("userId");
-		if (attribute == null){
-			return "redirect:/login/uLogin";
-		}
-		JSONObject js = new JSONObject();
-		user.setId(Integer.valueOf(attribute.toString()));
+		
 		userService.updateById(user);
 		//2.通过主键id修改
 		//userService.updateById(user);
-		return "redirect:/user/view.action";
+		return "redirect:/user/findBySql.action";
 	}
 	
 	/**

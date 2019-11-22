@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="${ctx}/resource/css/admin.css">
     <script src="${ctx}/resource/js/jquery.js"></script>
     <script src="${ctx}/resource/js/pintuer.js"></script>  
-    
+    <script src="${ctx}/resource/js/layer/layer.js"></script>  
 </head>
 <body>
 <form method="post" action="${ctx}/user/findBySql" id="listform">
   <div class="panel admin-panel">
     <div class="padding border-bottom">
     <ul class="search" style="padding-left:10px;">
+    <li> <a class="button border-main icon-plus-square-o" href="${ctx}/user/add"> 添加用户</a> </li>
        <li>
           <input type="text" placeholder="请输入用户名" name="userName" class="input" value="${obj.userName}" style="width:250px; line-height:17px;display:inline-block" />
           <a href="javascript:void(0)" class="button border-main icon-search" onclick="changesearch()" > 搜索</a></li>
@@ -35,6 +36,7 @@
                             <th>性别</th>
                             <th>邮箱</th>
                             <th>地址</th>
+                            <th>操作</th>
                         </tr>
           <c:forEach items="${pagers.datas}" var="data" varStatus="l">
 	                  <tr>
@@ -44,10 +46,10 @@
 	                    <td>${data.sex}</td>
 	                    <td>${data.email}</td>
 	                    <td>${data.address}</td>
-	                   <!--  <td>
-	                        <a class="link-update" href="#">修改</a>
-	                        <a class="link-del" href="#">删除</a>
-	                    </td> -->
+	                    <td>
+	                        <a class="link-update" href="${ctx}/user/update?id=${data.id}">修改</a>
+	                        <a class="link-del" onclick="del(${data.id})" >删除</a>
+	                    </td>
 	                </tr>
                   </c:forEach>
                   
@@ -104,9 +106,31 @@
 <script type="text/javascript">
 
 function del(id){
-	if(confirm("您确定要删除吗?")){
-		
-	}
+	console.log(id);
+	 layer.confirm('确认要删除吗？',{
+		btn: ['确定','我再想想'] //按钮
+	}, function(){
+		/* $.ajax({
+			type: 'POST',
+			url: '${ctx}/user/delete',
+			dataType: 'json',
+			data:{id:id},
+			success: function(data){
+				if(data.msg == 'success'){
+					layer.msg('删除成功!',{icon:1,time:2000},function(){
+						window.location.reload();
+					});
+				}else{
+					layer.msg('删除失败!',{icon:1,time:2000},function(){
+						window.location.reload();
+				    });
+				}
+			}
+		});	 */
+		window.location.href="${ctx}/user/delete?id="+id;
+	}, function(){
+	  layer.msg('明白了');
+	});
 }
 
 //搜索

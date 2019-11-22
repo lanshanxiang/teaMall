@@ -24,9 +24,9 @@
 				</c:if>
 
 				<li class="hd_menu_tit" data-addclass="hd_menu_hover"><a
-					href="#">我的订单</a></li>
+					href="${ctx}/itemOrder/my">我的订单</a></li>
 				<li class="hd_menu_tit" data-addclass="hd_menu_hover"><a
-					href="${ctx}/car/findBySql">购物车(<b>0</b>)
+					href="${ctx}/car/findBySql">购物车(<b>${fn:length(list)}</b>)
 				</a></li>
 				<li class="hd_menu_tit" data-addclass="hd_menu_hover"><a
 					href="${ctx}/user/view">个人中心</a></li>
