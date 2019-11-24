@@ -147,22 +147,4 @@
 				<a href="#" class="return_img"></a>
 			</div>
 		</div>
-		<!--右侧菜单栏购物车样式-->
-		<div class="fixedBox">
-			<ul class="fixedBoxList">
-				<li class="fixeBoxLi user"><a href="#"> <span
-						class="fixeBoxSpan"></span> <strong>用户</strong></a></li>
-				<li class="fixeBoxLi cart_bd" style="display: block;" id="cartboxs">
-					<p class="good_cart">0</p> <span class="fixeBoxSpan"></span> <strong>购物车</strong>
-					<div class="cartBox">
-						<div class="bjfff"></div>
-						<div class="message">购物车内暂无商品，赶紧选购吧</div>
-					</div>
-				</li>
-				<li class="fixeBoxLi Home"><a href="./"> <span
-						class="fixeBoxSpan"></span> <strong>收藏</strong>
-				</a></li>
-				<li class="fixeBoxLi BackToTop"><span class="fixeBoxSpan"></span>
-					<strong>返回顶部</strong></li>
-			</ul>
-		</div>
+		

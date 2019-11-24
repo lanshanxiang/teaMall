@@ -30,16 +30,6 @@
 				</a></li>
 				<li class="hd_menu_tit" data-addclass="hd_menu_hover"><a
 					href="${ctx}/user/view">个人中心</a></li>
-				<li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a
-					href="#" class="hd_menu">客户服务</a>
-					<div class="hd_menu_list">
-						<ul>
-							<li><a href="#">常见问题</a></li>
-							<li><a href="#">在线退换货</a></li>
-							<li><a href="#">在线投诉</a></li>
-							<li><a href="#">配送范围</a></li>
-						</ul>
-					</div></li>
 			</ul>
 		</div>
 	</div>

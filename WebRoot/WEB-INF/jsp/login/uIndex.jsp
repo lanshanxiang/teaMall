@@ -22,7 +22,7 @@
 <body>
 	<!--顶部样式-->
 	<%@ include file="/common/utop.jsp"%>
-	
+
 	<!--菜单栏样式-->
 	<!--导航栏样式-->
 	<div id="Menu" class="clearfix">
@@ -108,27 +108,29 @@
 				</div>
 				<div class="Area_list clearfix">
 					<div class="Area_ad">
-						<a href="#"><img src="${ctx}/resource/users/images/AD-04.jpg" /></a> <a href="#"><img
+						<a href="#"><img src="${ctx}/resource/users/images/AD-04.jpg"
+							/></a> <a href="#"><img
 							src="${ctx}/resource/users/images/AD-03.jpg" /></a>
 					</div>
 					<div class="Area_p_list">
 						<ul>
-						<c:forEach items="${zks}" var="data" varStatus="l">
-							<li class="s_Products">
-								<div class="Area_product_c">
-									<div class="img center">
-										<a href="${ctx}/item/view?id=${data.id}"><img src="${data.url1}" /></a>
+							<c:forEach items="${zks}" var="data" varStatus="l">
+								<li class="s_Products">
+									<div class="Area_product_c">
+										<div class="img center">
+											<a href="${ctx}/item/view?id=${data.id}"><img
+												src="${data.url1}" style="width: 217px; height: 188px;" /></a>
+										</div>
+										<div class="title_name">
+											<a href="${ctx}/item/view?id=${data.id}">${data.name}</a>
+										</div>
+										<div class="s_Price clearfix">
+											<span class="Current_price">商城价<em>￥${data.price}</em></span>
+											<span class="Original_Price">原价&nbsp;<em>76.00</em></span>
+										</div>
 									</div>
-									<div class="title_name">
-										<a href="${ctx}/item/view?id=${data.id}">${data.name}</a>
-									</div>
-									<div class="s_Price clearfix">
-										<span class="Current_price">商城价<em>￥${data.price}</em></span> <span
-											class="Original_Price">原价&nbsp;<em>76.00</em></span>
-									</div>
-								</div>
-							</li>
-						</c:forEach>
+								</li>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
@@ -145,27 +147,28 @@
 				</div>
 				<div class="Area_list clearfix">
 					<div class="Area_ad">
-						<a href="#"><img src="${ctx}/resource/users/images/AD-02.jpg" /></a> <a href="#"><img
-							src="${ctx}/resource/users/images/AD-01.jpg" /></a>
+						<a href="#"><img src="${ctx}/resource/users/images/AD-02.jpg" /></a>
+						<a href="#"><img src="${ctx}/resource/users/images/AD-01.jpg" /></a>
 					</div>
 					<div class="Area_p_list">
 						<ul>
-						<c:forEach items="${rxs}" var="data" varStatus="l">
-							<li class="s_Products">
-								<div class="Area_product_c">
-									<div class="img center">
-										<a href="${ctx}/item/view?id=${data.id}"><img src="${data.url1}" /></a>
+							<c:forEach items="${rxs}" var="data" varStatus="l">
+								<li class="s_Products">
+									<div class="Area_product_c">
+										<div class="img center">
+											<a href="${ctx}/item/view?id=${data.id}"><img
+												src="${data.url1}" style="width: 217px; height: 188px;"/></a>
+										</div>
+										<div class="title_name">
+											<a href="${ctx}/item/view?id=${data.id}">${data.name}</a>
+										</div>
+										<div class="s_Price clearfix">
+											<span class="Current_price">商城价<em>￥${data.price}</em></span>
+											<span class="Original_Price">原价&nbsp;<em>76.00</em></span>
+										</div>
 									</div>
-									<div class="title_name">
-										<a href="${ctx}/item/view?id=${data.id}">${data.name}</a>
-									</div>
-									<div class="s_Price clearfix">
-										<span class="Current_price">商城价<em>￥${data.price}</em></span> <span
-											class="Original_Price">原价&nbsp;<em>76.00</em></span>
-									</div>
-								</div>
-							</li>
-						</c:forEach>
+								</li>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
@@ -182,26 +185,27 @@
 				</div>
 				<div class="Area_list clearfix">
 					<div class="Area_ad">
-						<a href="#"><img src="${ctx}/resource/users/images/AD-05.jpg" /></a> <a href="#"><img
-							src="${ctx}/resource/users/images/AD-06.jpg" /></a>
+						<a href="#"><img src="${ctx}/resource/users/images/AD-05.jpg" /></a>
+						<a href="#"><img src="${ctx}/resource/users/images/AD-06.jpg" /></a>
 					</div>
 					<div class="Area_p_list">
 						<ul>
-						<c:forEach items="${tjs}" var="data" varStatus="l">
-							<li class="s_Products">
-								<div class="Area_product_c">
-									<div class="img center">
-										<a href="${ctx}/item/view?id=${data.id}"><img src="${data.url1}" /></a>
+							<c:forEach items="${tjs}" var="data" varStatus="l">
+								<li class="s_Products">
+									<div class="Area_product_c">
+										<div class="img center">
+											<a href="${ctx}/item/view?id=${data.id}"><img
+												src="${data.url1}" style="width: 217px; height: 188px;"/></a>
+										</div>
+										<div class="title_name">
+											<a href="${ctx}/item/view?id=${data.id}">${data.name}</a>
+										</div>
+										<div class="s_Price clearfix">
+											<span class="Current_price">商城价<em>￥${data.price}</em></span>
+											<span class="Original_Price">原价&nbsp;<em>76.00</em></span>
+										</div>
 									</div>
-									<div class="title_name">
-										<a href="${ctx}/item/view?id=${data.id}">${data.name}</a>
-									</div>
-									<div class="s_Price clearfix">
-										<span class="Current_price">商城价<em>￥${data.price}</em></span> <span
-											class="Original_Price">原价&nbsp;<em>76.00</em></span>
-									</div>
-								</div>
-							</li>
+								</li>
 							</c:forEach>
 						</ul>
 					</div>
