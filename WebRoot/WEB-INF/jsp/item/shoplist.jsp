@@ -32,67 +32,13 @@
 	<!--内页样式-->
 	<div class="Inside_pages">
 		<div class="products">
-			<!--当前位置（面包屑）-->
-			<div class="Location_link">
-				<em></em><a href="#">产品中心</a> &lt; <a href="#">巴山雀舌</a>
-			</div>
-			<!--筛选条件样式-->
-			<div class="products_Select marginbottom">
-				<div class="Filter">
-					<div class="Filter_list clearfix">
-						<div class="Filter_title">
-							<span>品牌：</span>
-						</div>
-						<div class="Filter_Entire">
-							<a href="#">全部</a>
-						</div>
-						<div class="p_f_name">
-							<a href="#" title="莱家/Loacker">莱家/Loacker </a> <a href="#"
-								title="">丽芝士/Richeese</a> <a href="#"
-								title="白色恋人/SHIROI KOIBITO ">白色恋人/SHIROI KOIBITO </a> <a
-								href="#">爱时乐/Astick </a> <a href="#">利葡/LiPO </a> <a href="#">友谊牌/Tipo
-							</a> <a href="#"> 三立/SANRITSU </a> <a href="#"> 皇冠/Danisa </a> <a
-								href="#">丹麦蓝罐/Kjeldsens</a>
-						</div>
-					</div>
-					<div class="Filter_list clearfix">
-						<div class="Filter_title">
-							<span>包装方式：</span>
-						</div>
-						<div class="Filter_Entire">
-							<a href="#">全部</a>
-						</div>
-						<div class="p_f_name">
-							<a href="#">袋装</a><a href="#">盒装</a><a href="#">罐装</a><a href="#">礼盒装</a><a
-								href="#">散装(称重)</a>
-						</div>
-					</div>
-					<div class="Filter_list clearfix">
-						<div class="Filter_title">
-							<span>价格：</span>
-						</div>
-						<div class="Filter_Entire">
-							<a href="#">全部</a>
-						</div>
-						<div class="p_f_name">
-							<a href="#">0-50</a><a href="#">50-150</a><a href="#">150-500</a><a
-								href="#">500-1000</a><a href="#">1000以上</a>
-						</div>
-					</div>
-				</div>
-			</div>
 			<!--产品列表列表-->
 			<div class="products_list marginbottom">
 				<div class="Sorted">
 					<div class="Sorted_style">
-						<a href="#" class="on">综合<i class="icon-angle-down"></i></a> <a
-							href="#">销量<i class="icon-angle-down"></i></a> <a href="#">价格<i
-							class="icon-angle-down"></i></a> <a href="#">新品<i
+						<a href="${ctx}/item/shoplist?categoryIdTwo=${obj.categoryIdTwo}" class="on">综合<i class="icon-angle-down"></i></a> <a
+							href="${ctx}/item/shoplist?gmNum=1&categoryIdTwo=${obj.categoryIdTwo}">销量<i class="icon-angle-down"></i></a> <a href="${ctx}/item/shoplist?price=1&categoryIdTwo=${obj.categoryIdTwo}">价格<i
 							class="icon-angle-down"></i></a>
-					</div>
-					<!--页数-->
-					<div class="s_Paging">
-						<span> 1/12</span> <a href="#" class="on">&lt;</a> <a href="#">&gt;</a>
 					</div>
 				</div>
 				<!--产品列表样式-->
@@ -103,8 +49,7 @@
 								<div class="Borders">
 									<div class="img">
 										<a href="${ctx}/item/view?id=${data.id}"><img
-											src="${data.url1}"
-											style="width: 220px; height: 220px" /></a>
+											src="${data.url1}" style="width: 220px; height: 220px" /></a>
 									</div>
 									<div class="name">
 										<a href="${ctx}/item/view?id=${data.id}">${data.name}</a>
@@ -112,28 +57,68 @@
 									<div class="Price">
 										商城价：<b>¥${data.zk}</b>
 										<c:if test="${data.zk != null}">
-										<span>原价：<em>¥${data.price}.00</em></span>
+											<span>原价：<em>¥${data.price}.00</em></span>
 										</c:if>
 									</div>
 									<!-- <div class="Review">
 										已有<a href="#">2345</a>评论
 									</div> -->
 									<div class="p-operate">
-										<a href="${ctx}/sc/exAdd?itemId=${data.id}" class="p-o-btn Collect"><em></em>收藏</a> 
-										<a onclick="addcar('${data.id}')" class="p-o-btn shop_cart wCa"><em></em>加入购物车</a>
+										<a href="${ctx}/sc/exAdd?itemId=${data.id}"
+											class="p-o-btn Collect"><em></em>收藏</a> <a
+											onclick="addcar('${data.id}')" class="p-o-btn shop_cart wCa"><em></em>加入购物车</a>
 									</div>
 								</div>
 							</li>
 						</c:forEach>
 					</ul>
 					<div class="Paging_style">
-						<a href="#" class="pn-prev disabled">&lt;上一页</a> <a href="#"
-							class="on">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>
-						<a href="#">下一页&gt;</a> <a href="#">尾页</a> <span class="p-skip"><em>共<b>232</b>页&nbsp;&nbsp;到第
-						</em><input id="page_jump_num" value="1"
-							onkeydown="javascript:if(event.keyCode==13){page_jump();return false;}"
-							class="input-txt"><em>页</em><a
-							href="javascript:page_jump();" class="btn btn-default">确定</a></span>
+						<div class="pagelist">
+							<!-- 分页开始 -->
+							<pg:pager url="${ctx}/item/shoplist" maxIndexPages="5"
+								items="${pagers.total}" maxPageItems="15"
+								export="curPage=pageNumber">
+								<pg:param name="categoryIdTwo" value="${obj.categoryIdTwo}" />
+								<pg:param name="price" value="${obj.price}" />
+								<pg:param name="gmNum" value="${obj.gmNum}" />
+								<pg:param name="condition" value="${condition}" />
+								<pg:last>  
+								共${pagers.total}记录,共${pageNumber}页,  
+							</pg:last>  
+								当前第${curPage}页 
+					        <pg:first>
+									<a href="${pageUrl}">首页</a>
+								</pg:first>
+								<pg:prev>
+									<a href="${pageUrl}">上一页</a>
+								</pg:prev>
+								<pg:pages>
+									<c:choose>
+										<c:when test="${curPage eq pageNumber}">
+											<font color="red">[${pageNumber }]</font>
+										</c:when>
+										<c:otherwise>
+											<a href="${pageUrl}">${pageNumber}</a>
+										</c:otherwise>
+									</c:choose>
+								</pg:pages>
+
+								<pg:next>
+									<a href="${pageUrl}">下一页</a>
+								</pg:next>
+								<pg:last>
+									<c:choose>
+										<c:when test="${curPage eq pageNumber}">
+											<font color="red">尾页</font>
+										</c:when>
+										<c:otherwise>
+											<a href="${pageUrl}">尾页</a>
+										</c:otherwise>
+									</c:choose>
+
+								</pg:last>
+							</pg:pager>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -361,27 +346,27 @@
 		</ul>
 	</div>
 	<script>
-$(".wCa div").click(function(){
-	$(this).addClass("on")
-	})
-	
-	function addcar(id){
-	   var num = 1;
-	   var s = "${ctx}/car/exAdd?itemId="+id+"&num="+num;
-	   $.ajax({  
-      type : "POST",  //提交方式  
-      url : "${ctx}/car/exAdd?itemId="+id+"&num="+num,//路径  
-      success : function(result) {//返回数据根据结果进行相应的处理  
-      	var re = JSON.parse(result)
-      	if (re.res == 0){
-      		alert("请登陆");
-      		window.location.href = "${ctx}/login/uLogin";
-      	}else{
-      		window.location.href = "${ctx}/car/findBySql";
-      	}
-      }  
-  }); 
-}
-</script>
+		$(".wCa div").click(function() {
+			$(this).addClass("on")
+		})
+
+		function addcar(id) {
+			var num = 1;
+			var s = "${ctx}/car/exAdd?itemId=" + id + "&num=" + num;
+			$.ajax({
+				type : "POST", //提交方式  
+				url : "${ctx}/car/exAdd?itemId=" + id + "&num=" + num,//路径  
+				success : function(result) {//返回数据根据结果进行相应的处理  
+					var re = JSON.parse(result)
+					if (re.res == 0) {
+						alert("请登陆");
+						window.location.href = "${ctx}/login/uLogin";
+					} else {
+						window.location.href = "${ctx}/car/findBySql";
+					}
+				}
+			});
+		}
+	</script>
 </body>
 </html>

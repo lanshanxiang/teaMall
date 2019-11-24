@@ -50,8 +50,7 @@
 					class="Search_btn" />
 			</p>
 			<p class="Words">
-				<a href="#">苹果</a><a href="#">香蕉</a><a href="#">菠萝</a><a href="#">西红柿</a><a
-					href="#">橙子</a><a href="#">苹果</a>
+				<a href="#">武夷岩茶</a><a href="#">龙井</a><a href="#">碧螺春</a>
 			</p>
 		</form>
 	</div>
