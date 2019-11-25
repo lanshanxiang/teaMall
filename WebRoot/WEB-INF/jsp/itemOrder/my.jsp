@@ -163,7 +163,8 @@ div#navLt span:hover {
 										<div class="width100 hidden_yh font20 c_66"
 											style="background: #faf5f5; text-indent: 47px; height: 50px; line-height: 50px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between;">
 											<fmt:formatDate value="${data.addTime}" type="both" />
-											<span> 订单号:${data.code} </span> <span style="margin-right: 50px;"> <!--  0.新建代发货1.已取消 2已已发货3.到收货 -->
+											<span> 订单号:${data.code} </span> <span
+												style="margin-right: 50px;"> <!--  0.新建代发货1.已取消 2已已发货3.到收货 -->
 												<c:if test="${data.status == 0}"> 待发货</c:if> <c:if
 													test="${data.status == 1}"> 已取消</c:if> <c:if
 													test="${data.status == 2}"> 待收货</c:if> <c:if
@@ -174,7 +175,7 @@ div#navLt span:hover {
 
 										<c:forEach items="${data.details}" var="chil" varStatus="l">
 											<div
-												style="display: flex; align-items: center; padding: 30px 50px;width: 838px; border-bottom: 1px dashed #ddd; padding-top: 30px; padding-bottom: 30px;"
+												style="display: flex; align-items: center; padding: 30px 50px; width: 838px; border-bottom: 1px dashed #ddd; padding-top: 30px; padding-bottom: 30px;"
 												class="hidden_yh center_yh">
 												<img src="${chil.item.url1}" width="100" height="100"
 													class="left_yh" style="padding-right: 10px">
@@ -193,8 +194,7 @@ div#navLt span:hover {
 											</div>
 										</c:forEach>
 										<!--总结-->
-										<div
-											style="width: 838px; padding: 30px 50px;"
+										<div style="width: 838px; padding: 30px 50px;"
 											class="hidden_yh center_yh tleft">
 											<font class="font24">总金额<font class="font18 c_66">(含运费0元)：</font></font><font
 												class="red font34"><font class="font24">￥</font>${data.total}</font>
@@ -236,7 +236,8 @@ div#navLt span:hover {
 										<div class="width100 hidden_yh font20 c_66"
 											style="background: #faf5f5; text-indent: 47px; height: 50px; line-height: 50px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between;">
 											<fmt:formatDate value="${data.addTime}" type="both" />
-											<span> 订单号:${data.code} </span> <span style="margin-right: 50px;"> <!--  0.新建代发货1.已取消 2已已发货3.到收货 -->
+											<span> 订单号:${data.code} </span> <span
+												style="margin-right: 50px;"> <!--  0.新建代发货1.已取消 2已已发货3.到收货 -->
 												<c:if test="${data.status == 0}"> 待发货</c:if> <c:if
 													test="${data.status == 1}"> 已取消</c:if> <c:if
 													test="${data.status == 2}"> 待收货</c:if> <c:if
@@ -247,7 +248,7 @@ div#navLt span:hover {
 
 										<c:forEach items="${data.details}" var="chil" varStatus="l">
 											<div
-												style="display: flex; align-items: center; padding: 30px 50px;width: 838px; border-bottom: 1px dashed #ddd; padding-top: 30px; padding-bottom: 30px;"
+												style="display: flex; align-items: center; padding: 30px 50px; width: 838px; border-bottom: 1px dashed #ddd; padding-top: 30px; padding-bottom: 30px;"
 												class="hidden_yh center_yh">
 												<img src="${chil.item.url1}" width="100" height="100"
 													class="left_yh" style="padding-right: 10px">
@@ -266,8 +267,7 @@ div#navLt span:hover {
 											</div>
 										</c:forEach>
 										<!--总结-->
-										<div
-											style="width: 838px;padding: 30px 50px;"
+										<div style="width: 838px; padding: 30px 50px;"
 											class="hidden_yh center_yh tleft">
 											<font class="font24">总金额<font class="font18 c_66">(含运费0元)：</font></font><font
 												class="red font34"><font class="font24">￥</font>${data.total}</font>
@@ -308,7 +308,8 @@ div#navLt span:hover {
 										<div class="width100 hidden_yh font20 c_66"
 											style="background: #faf5f5; text-indent: 47px; height: 50px; line-height: 50px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between;">
 											<fmt:formatDate value="${data.addTime}" type="both" />
-											<span> 订单号:${data.code}</span> <span style="margin-right: 50px;"> <!--  0.新建代发货1.已取消 2已已发货3.到收货 -->
+											<span> 订单号:${data.code}</span> <span
+												style="margin-right: 50px;"> <!--  0.新建代发货1.已取消 2已已发货3.到收货 -->
 												<c:if test="${data.status == 0}"> 待发货</c:if> <c:if
 													test="${data.status == 1}"> 已取消</c:if> <c:if
 													test="${data.status == 2}"> 待收货</c:if> <c:if
@@ -319,7 +320,7 @@ div#navLt span:hover {
 
 										<c:forEach items="${data.details}" var="chil" varStatus="l">
 											<div
-												style="display: flex; align-items: center; padding: 30px 50px;width: 838px; border-bottom: 1px dashed #ddd; padding-top: 30px; padding-bottom: 30px;"
+												style="display: flex; align-items: center; padding: 30px 50px; width: 838px; border-bottom: 1px dashed #ddd; padding-top: 30px; padding-bottom: 30px;"
 												class="hidden_yh center_yh">
 												<img src="${chil.item.url1}" width="100" height="100"
 													class="left_yh" style="padding-right: 10px">
@@ -338,8 +339,7 @@ div#navLt span:hover {
 											</div>
 										</c:forEach>
 										<!--总结-->
-										<div
-											style="width: 838px;padding: 30px 50px;"
+										<div style="width: 838px; padding: 30px 50px;"
 											class="hidden_yh center_yh tleft">
 											<font class="font24">总金额<font class="font18 c_66">(含运费0元)：</font></font><font
 												class="red font34"><font class="font24">￥</font>${data.total}</font>
@@ -380,7 +380,8 @@ div#navLt span:hover {
 										<div class="width100 hidden_yh font20 c_66"
 											style="background: #faf5f5; text-indent: 47px; height: 50px; line-height: 50px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between;">
 											<fmt:formatDate value="${data.addTime}" type="both" />
-											<span> 订单号:${data.code} </span> <span style="margin-right: 50px;"> <!--  0.新建代发货1.已取消 2已已发货3.到收货 -->
+											<span> 订单号:${data.code} </span> <span
+												style="margin-right: 50px;"> <!--  0.新建代发货1.已取消 2已已发货3.到收货 -->
 												<c:if test="${data.status == 0}"> 待发货</c:if> <c:if
 													test="${data.status == 1}"> 已取消</c:if> <c:if
 													test="${data.status == 2}"> 待收货</c:if> <c:if
@@ -391,7 +392,7 @@ div#navLt span:hover {
 
 										<c:forEach items="${data.details}" var="chil" varStatus="l">
 											<div
-												style="display: flex; align-items: center; padding: 30px 50px;width: 838px; border-bottom: 1px dashed #ddd; padding-top: 30px; padding-bottom: 30px;"
+												style="display: flex; align-items: center; padding: 30px 50px; width: 838px; border-bottom: 1px dashed #ddd; padding-top: 30px; padding-bottom: 30px;"
 												class="hidden_yh center_yh">
 												<img src="${chil.item.url1}" width="100" height="100"
 													class="left_yh" style="padding-right: 10px">
@@ -412,8 +413,7 @@ div#navLt span:hover {
 											</div>
 										</c:forEach>
 										<!--总结-->
-										<div
-											style="width: 838px; padding: 30px 50px;"
+										<div style="width: 838px; padding: 30px 50px;"
 											class="hidden_yh center_yh tleft">
 											<font class="font24">总金额<font class="font18 c_66">(含运费0元)：</font></font><font
 												class="red font34"><font class="font24">￥</font>${data.total}</font>
@@ -445,46 +445,16 @@ div#navLt span:hover {
 					</div>
 				</div>
 			</div>
-			<!--收藏商品-->
-			<div class="Collections_p">
-				<div class="title_name">收藏的商品</div>
-				<div id="Collect_Products" class="Collect_Products">
-					<div class="hd">
-						<a class="next">&lt;</a> <a class="prev">&gt;</a>
-					</div>
-					<div class="bd">
-						<ul>
-							<li class="clone" style="float: left; width: 160px;">
-								<div class="pic">
-									<a href=""><img src="Products/11.jpg"></a>
-								</div>
-								<div class="title">
-									<a href="#">金龙鱼 东北大米 蟹稻共生 盘锦大米5KG</a>
-								</div>
-								<div class="p_Price">￥32.50</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- <script type="text/javascript">
-					jQuery("#Collect_Products").slide({
-						mainCell : ".bd ul",
-						effect : "leftLoop",
-						vis : 5,
-						autoPlay : false
-					});
-				</script> -->
-			</div>
-			<!--结束-->
 		</div>
+		<!--结束-->
+	</div>
 	</div>
 	<div class="footerbox">
 		<!--友情链接-->
 		<div class="Links">
 			<div class="link_title">友情链接</div>
 			<div class="link_address">
-				<a href="#">四川茶叶协会</a> <a href="#">链接地址</a> <a href="#">链接地址</a> <a
+				<a href="#">茶叶协会</a> <a href="#">链接地址</a> <a href="#">链接地址</a> <a
 					href="#">链接地址 </a> <a href="#">链接地址</a> <a href="#">链接地址</a> <a
 					href="#">链接地址</a>
 			</div>

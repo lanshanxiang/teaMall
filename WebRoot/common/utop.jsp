@@ -49,9 +49,7 @@
 					value="${condition }" /> <input name="" type="submit" value=""
 					class="Search_btn" />
 			</p>
-			<p class="Words">
-				<a href="#">武夷岩茶</a><a href="#">龙井</a><a href="#">碧螺春</a>
-			</p>
+
 		</form>
 	</div>
 </div>

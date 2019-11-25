@@ -44,9 +44,6 @@
 						<form id="form1" name="form1" method="post" action="${ctx}/user/exUpdate">
 							<div class="user_layout">
 								<ul>
-									<li><label class="user_title_name">用户头像：</label></li>
-									<li><label class="user_title_name">用户昵称：</label><input
-										name="" type="text" class="add_text" /><i>*</i></li>
 									<li><label class="user_title_name">真实姓名：</label><input
 										name="realName" value="${obj.realName}" type="text"
 										class="add_text" /><i>*</i></li>

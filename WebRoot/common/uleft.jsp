@@ -9,7 +9,7 @@
 						<!--头像区域-->
 					</div>
 					<div class="user_name">
-						用户蜜甘草<a href="#">[个人资料]</a>
+						${username}
 					</div>
 				</div>
 				<ul class="Section">
