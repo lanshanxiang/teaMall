@@ -134,27 +134,12 @@
 						<div class="mod_detailInfo_priceSales">
 							<div class="margins">
 								<div class="Price clearfix text_name">
-									<label>价格</label><span class="Prices"><h4>¥${obj.price}</h4> <b>34.00</b></span>
+									<label>价格</label><span class="Prices"><h4>¥${obj.price}</h4>
+										<b>34.00</b></span>
 								</div>
 								<div class="Activity clearfix text_name">
 									<label>重量</label><span class="weight">345克</span>
 								</div>
-								<div class="Size clearfix text_name">
-									<label>规格</label><a href="#">袋装</a><a href="#">礼盒装</a><a
-										href="#">铁盒</a>
-								</div>
-								<div class="Sales_volume">
-									<div class="Sales_info">
-										<h5>销量</h5>
-										<b>2345</b>
-									</div>
-								</div>
-							</div>
-							<div class="s_Review">
-								<a href="#">好评率<b>95%</b>[评论<b>87653</b>条]
-								</a>
-							</div>
-						</div>
 						<div class="buyinfo" id="detail_buyinfo">
 							<dl>
 								<dt>数量</dt>
@@ -210,307 +195,18 @@
 		</div>
 		<!---->
 		<div class="clearfix">
-			<div class="left_style">
-				<div class="Records">
-					<div class="title_name">用户浏览记录</div>
-					<ul>
-						<li><a href="#">
-								<p>
-									<img src="Products/4.jpg" data-bd-imgshare-binded="1">
-								</p>
-								<p class="p_name">SanmiuSunflower新苗向日葵 乳酪夹心饼干 270g 菲律宾进口</p>
-						</a>
-							<p>
-								<span class="p_Price">￥5.30</span><b>10.4</b>
-							</p></li>
-						<li><a href="#">
-								<p>
-									<img src="Products/5.jpg" data-bd-imgshare-binded="1">
-								</p>
-								<p class="p_name">商品名称</p>
-						</a>
-							<p>
-								<span class="p_Price">￥5.30</span><b>10.4</b>
-							</p></li>
-						<li><a href="#">
-								<p>
-									<img src="Products/3.jpg" data-bd-imgshare-binded="1">
-								</p>
-								<p class="p_name">商品名称</p>
-						</a>
-							<p>
-								<span class="p_Price">￥5.30</span><b>10.4</b>
-							</p></li>
-					</ul>
-				</div>
-			</div>
-			<div class="right_style">
+			<div class="right_style" style="width: 100%">
 				<div class="inDetail_boxOut ">
 					<div class="inDetail_box">
 						<div class="fixed_out ">
-							<ul class="inLeft_btn fixed_bar">
+							<ul class="inLeft_btn fixed_bar" id="spXqpj">
 								<li><a id="property-id" href="#shangpsx" class="current">商品属性</a></li>
-								<li><a id="detail-id" href="#shangpjs">规格与包装</a></li>
-								<li><a id="shot-id" href="#miqsp">售后服务</a></li>
-								<li><a id="coms1-id" href="#coms1">买家评论</a></li>
 							</ul>
 						</div>
 						<!---->
 						<div class="product_details">
-							<div id="shangpsx">
-								<div class="title">
-									<img src="images/title_name_03.png" />
-								</div>
-								<ul class="shangpsx_info">
-									<li><label>生产许可证编号</label><span>QS3301 1401 0973</span></li>
-									<li><label>产品标准号</label><span>GB/T 18650</span></li>
-									<li><label>生产日期</label><span>2015年4月</span></li>
-									<li><label>有效期</label><span>三年</span></li>
-									<li><label>产品名称</label><span>艺福堂茶叶 绿茶 龙井茶 西湖龙井
-											雨前靠谱茶</span></li>
-									<li><label>净含量</label><span>250g</span></li>
-									<li><label>包装</label><span>罐装</span></li>
-									<li><label>品牌</label><span>艺福堂</span></li>
-									<li><label>食品工艺</label><span>炒青绿茶</span></li>
-									<li><label>级别</label><span>三级</span></li>
-									<li><label>产地</label><span>中国大陆杭州</span></li>
-									<li><label>价格</label><span>100-199元</span></li>
-								</ul>
-							</div>
-							<div id="shangpjs">
-								<img src="images/pro_img.png" />
-							</div>
-							<div id="coms1">
-								<div class="productContent" id="status2">
-									<div class=""></div>
-									<div class="iComment clearfix">
-										<div class="rate">
-											<strong id="goodRate">100<span>%</span></strong><br> <span>好评度</span>
-										</div>
-										<div class="percent" id="percentRate">
-											<dl>
-												<dt>
-													好评<span>(100%)</span>
-												</dt>
-												<dd>
-													<div style="width: 100px;"></div>
-												</dd>
-											</dl>
-											<dl>
-												<dt>
-													中评<span>(0%)</span>
-												</dt>
-												<dd class="d1">
-													<div style="width: 0;"></div>
-												</dd>
-											</dl>
-											<dl>
-												<dt>
-													差评<span>(0%)</span>
-												</dt>
-												<dd class="d1">
-													<div style="width: 0;"></div>
-												</dd>
-											</dl>
-										</div>
-										<div class="actor">
-											<dl>
-												<dt>
-													发表评价即可获得10积分，精华评论更有 <font color="red">额外奖励</font> 积分；<br>
-													还有7个多倍积分名额哦，赶紧抢占吧！<br> 只有购买过该商品的用户才能进行评价。
-												</dt>
-											</dl>
-										</div>
-									</div>
-									<div class="commentBox" style="display: block;">
-										<form action="javascript:;" onsubmit="submitComment(this)"
-											method="post" name="commentForm" id="commentForm">
-											<h3>商品评分</h3>
-											<p class="tip">请直接点击相应的星级进行评分</p>
-											<div id="star">
-												<ul>
-													<li class=""><span onclick="dorank(1)"></span>
-														<p>1分</p>
-														<p>非常不满意</p></li>
-													<li class=""><span onclick="dorank(2)"></span>
-														<p>2分</p>
-														<p>不满意</p></li>
-													<li class=""><span onclick="dorank(3)"></span>
-														<p>3分</p>
-														<p>一般</p></li>
-													<li class=""><span onclick="dorank(4)"></span>
-														<p>4分</p>
-														<p>满意</p></li>
-													<li class=""><span onclick="dorank(5)"></span>
-														<p>5分</p>
-														<p>非常满意</p></li>
-												</ul>
-												<input type="hidden" name="rank" id="rank" value="1">
-												<input type="hidden" name="cmt_type" value=""> <input
-													type="hidden" name="id" value="78"> <input
-													type="hidden" name="email" id="email" value="null@mial.com">
-											</div>
-											<h4>评论内容</h4>
-											<div class="bd">
-												<textarea name="content" id="content" class="textarea_long"
-													onkeyup="checkLength(this);"></textarea>
-												<p class="g">
-													<label>&nbsp; </label> <input type="submit" value="发表"
-														class="btn_common"> <span t="word_calc"
-														class="word"><b id="sy">0</b>/1000</span>
-												</p>
-											</div>
-										</form>
-									</div>
-									<div id="ECS_COMMENT">
-										<div class="Comment">
-											<div class="CommentTab">
-												<ul>
-													<li class="active" onclick="javascript:gotoPage(1,78,0,0);">全部评论(0)</li>
-													<li onclick="javascript:gotoPage(1,78,0,3);">好评(0)</li>
-													<li onclick="javascript:gotoPage(1,78,0,2);">中评(0)</li>
-													<li onclick="javascript:gotoPage(1,78,0,1);">差评(0)</li>
-												</ul>
-											</div>
-											<div class="CommentText" id="goodsdetail_comments_list"
-												style="display: block">
-												<ul class="clearfix">
-												</ul>
-												<div class="discuss_Paging">
-													<div class="discuss">
-														<span class="f_l f6" style="margin-right: 10px;">共
-															<b>0</b> 条评论
-														</span>
-														<p id="commentPager_4">
-															<a href="javascript:gotoPage(1,78,0,0)">首页</a> <a
-																class="prev" href="javascript:;">上一页</a> <a class="next"
-																href="javascript:;">下一页</a> <a class="last"
-																href="javascript:;">尾页</a>
-														</p>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<script type="text/javascript">
-											//<![CDATA[
-											var cmt_empty_username = "请输入您的用户名称";
-											var cmt_empty_email = "请输入您的电子邮件地址";
-											var cmt_error_email = "电子邮件地址格式不正确";
-											var cmt_empty_content = "您没有输入评论的内容";
-											var captcha_not_null = "验证码不能为空!";
-											var cmt_invalid_comments = "无效的评论内容!";
-
-											/**
-											 * 提交评论信息
-											 */
-											function submitComment(frm) {
-												var cmt = new Object;
-
-												//cmt.username        = frm.elements['username'].value;
-												cmt.email = frm.elements['email'].value;
-												cmt.content = frm.elements['content'].value;
-												cmt.type = frm.elements['cmt_type'].value;
-												cmt.id = frm.elements['id'].value;
-												cmt.enabled_captcha = frm.elements['enabled_captcha'] ? frm.elements['enabled_captcha'].value
-														: '0';
-												cmt.captcha = frm.elements['captcha'] ? frm.elements['captcha'].value
-														: '';
-												cmt.rank = frm.elements['rank'].value;
-
-												/*  for (i = 0; i < frm.elements['comment_rank'].length; i++)
-												 {
-												 if (frm.elements['comment_rank'][i].checked)
-												 {
-												 cmt.rank = frm.elements['comment_rank'][i].value;
-												 }
-												 }*/
-
-												//  if (cmt.username.length == 0)
-												//  {
-												//     alert(cmt_empty_username);
-												//     return false;
-												//  }
-												if (cmt.email.length > 0) {
-													if (!(Utils
-															.isEmail(cmt.email))) {
-														alert(cmt_error_email);
-														return false;
-													}
-												} else {
-													alert(cmt_empty_email);
-													return false;
-												}
-
-												if (cmt.content.length == 0) {
-													alert(cmt_empty_content);
-													return false;
-												}
-
-												if (cmt.enabled_captcha > 0
-														&& cmt.captcha.length == 0) {
-													alert(captcha_not_null);
-													return false;
-												}
-
-												Ajax.call('comment.php', 'cmt='
-														+ cmt.toJSONString(),
-														commentResponse,
-														'POST', 'JSON');
-												frm.elements['content'].value = '';
-												return false;
-											}
-
-											/**
-											 * 处理提交评论的反馈信息
-											 */
-											function commentResponse(result) {
-												if (result.message) {
-													alert(result.message);
-												}
-
-												if (result.error == 0) {
-													var layer = document
-															.getElementById('ECS_COMMENT');
-
-													if (layer) {
-														layer.innerHTML = result.content;
-													}
-												}
-											}
-
-											//]]>
-										</script>
-									</div>
-									<script type="text/javascript">
-										$('.CommentTab ul')
-												.find('li')
-												.click(
-														function() {
-															$('.CommentTab ul')
-																	.find('li')
-																	.removeClass(
-																			'active');
-															$('.CommentText')
-																	.css(
-																			{
-																				display : 'none'
-																			});
-															$(this).addClass(
-																	'active');
-															$('.CommentText')
-																	.eq(
-																			$(
-																					this)
-																					.index())
-																	.css(
-																			{
-																				display : 'block'
-																			});
-														});
-									</script>
-								</div>
-							</div>
+							<!--商品详情-->
+							<div id="spDetil">${obj.ms}</div>
 						</div>
 					</div>
 				</div>
@@ -527,214 +223,74 @@
 		</div>
 	</div>
 	<!--底部样式-->
-	<div class="footer">
-		<div class="streak"></div>
-		<div class="footerbox clearfix">
-			<div class="left_footer">
-				<div class="img">
-					<img src="images/img_33.png" />
-				</div>
-				<div class="phone">
-					<h2>服务咨询电话</h2>
-					<p class="Numbers">400-3455-334</p>
-				</div>
-			</div>
-			<div class="right_footer">
-				<dl>
-					<dt>
-						<em class="icon_img"></em>购物指南
-					</dt>
-					<dd>
-						<a href="#">怎样购物</a>
-					</dd>
-					<dd>
-						<a href="#">积分政策</a>
-					</dd>
-					<dd>
-						<a href="#">会员优惠</a>
-					</dd>
-					<dd>
-						<a href="#">订单状态</a>
-					</dd>
-					<dd>
-						<a href="#">产品信息</a>
-					</dd>
-					<dd>
-						<a href="#">怎样购物</a>
-					</dd>
-				</dl>
-				<dl>
-					<dt>
-						<em class="icon_img"></em>配送方式
-					</dt>
-					<dd>
-						<a href="#">快递资费及送达时间</a>
-					</dd>
-					<dd>
-						<a href="#">快递覆盖地区查询</a>
-					</dd>
-					<dd>
-						<a href="#">验货与签收</a>
-					</dd>
-					<dd>
-						<a href="#">订单状态</a>
-					</dd>
-					<dd>
-						<a href="#">产品信息</a>
-					</dd>
-					<dd>
-						<a href="#">怎样购物</a>
-					</dd>
-				</dl>
-				<dl>
-					<dt>
-						<em class="icon_img"></em>配送方式
-					</dt>
-					<dd>
-						<a href="#">货到付款</a>
-					</dd>
-					<dd>
-						<a href="#">支付宝</a>
-					</dd>
-					<dd>
-						<a href="#">财付通</a>
-					</dd>
-					<dd>
-						<a href="#">网银支付</a>
-					</dd>
-					<dd>
-						<a href="#">银联支付</a>
-					</dd>
-				</dl>
-				<dl>
-					<dt>
-						<em class="icon_img"></em>售后服务
-					</dt>
-					<dd>
-						<a href="#">退换货原则</a>
-					</dd>
-					<dd>
-						<a href="#">退换货要求与运费规则</a>
-					</dd>
-					<dd>
-						<a href="#">退换货流程</a>
-					</dd>
-				</dl>
-				<dl>
-					<dt>
-						<em class="icon_img"></em>关于我们
-					</dt>
-					<dd>
-						<a href="#">关于我们</a>
-					</dd>
-					<dd>
-						<a href="#">友情链接</a>
-					</dd>
-					<dd>
-						<a href="#">媒体报道</a>
-					</dd>
-					<dd>
-						<a href="#">新闻动态</a>
-					</dd>
-					<dd>
-						<a href="#">企业文化</a>
-					</dd>
+	<%@ include file="/common/udown.jsp"%>
+<script>
+$("#spXqpj a").click(function(){
+	$(this).addClass("on").siblings().removeClass("on")
+	});
+$("#spXqpj a").eq(0).click(function(){
+	$("#spDetil").css({display:"block"}).siblings().css({display:"none"});
+	})
+$("#spXqpj a").eq(1).click(function(){
+	$("#spPj").css({display:"block"}).siblings().css({display:"none"});
+	})
+$(".pjYxz a").eq(0).click(function(){
+	$(".pjBoxA").css({display:"block"}).siblings().css({display:"none"});
+	})
+$(".pjYxz a").eq(1).click(function(){
+	$(".pjBoxG").css({display:"block"}).siblings().css({display:"none"});
+	})
+$(".pjYxz a").eq(2).click(function(){
+	$(".pjBoxL").css({display:"block"}).siblings().css({display:"none"});
+	})
+</script>
+    
+ <%@ include file="/common/ufooter.jsp" %>
 
-				</dl>
-			</div>
-		</div>
-		<div class="slogen">
-			<div class="footerbox clearfix ">
-				<ul class="wrap">
-					<li><a href="#"><img src="images/icon_img_02.png"
-							data-bd-imgshare-binded="1"></a> <b>正品保证</b> <span>正品行货
-							放心选购</span></li>
-					<li><a href="#"><img src="images/icon_img_03.png"
-							data-bd-imgshare-binded="2"></a> <b>满68元包邮</b> <span>购物满68元，免费快递</span>
-					</li>
-					<li><a href="#"><img src="images/icon_img_04.png"
-							data-bd-imgshare-binded="3"></a> <b>厂家直供</b> <span>价格更低，质量更可靠</span>
-					</li>
-					<li><a href="#"><img src="images/icon_img_05.png"
-							data-bd-imgshare-binded="4"></a> <b>权威认证</b> <span>政府扶持单位，安全保证</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="footerbox Copyright">
-			<p>
-				<a href="#">关于我们</a> | <a href="#">隐私申明</a> | <a href="#">成为供应商</a>
-				| <a href="#">茶叶</a> | <a href="#">博客</a> |<a href="#">友情链接</a> | <a
-					href="#">网站地图</a>
-			</p>
-			<p>Copyright 2010 - 2015 巴山雀舌 四川巴山雀舌茗茶实业有限公司 zuipin.cn All Rights
-				Reserved</p>
-			<p>川ICP备10200063号-1</p>
-			<a href="#" class="return_img"></a>
-		</div>
-	</div>
-	<!--右侧菜单栏购物车样式-->
-	<div class="fixedBox">
-		<ul class="fixedBoxList">
-			<li class="fixeBoxLi user"><a href="#"> <span
-					class="fixeBoxSpan"></span> <strong>用户</strong></a></li>
-			<li class="fixeBoxLi cart_bd" style="display: block;" id="cartboxs">
-				<p class="good_cart">0</p> <span class="fixeBoxSpan"></span> <strong>购物车</strong>
-				<div class="cartBox">
-					<div class="bjfff"></div>
-					<div class="message">购物车内暂无商品，赶紧选购吧</div>
-				</div>
-			</li>
-			<li class="fixeBoxLi Service "><span class="fixeBoxSpan"></span>
-				<strong>客服</strong>
-				<div class="ServiceBox">
-					<div class="bjfffs"></div>
-					<dl onclick="javascript:;">
-						<dt>
-							<img src="images/Service1.png">
-						</dt>
-						<dd>
-							<strong>QQ客服1</strong>
-							<p class="p1">9:00-22:00</p>
-							<p class="p2">
-								<a
-									href="http://wpa.qq.com/msgrd?v=3&amp;uin=123456&amp;site=DGG三端同步&amp;menu=yes">点击交谈</a>
-							</p>
-						</dd>
-					</dl>
-					<dl onclick="javascript:;">
-						<dt>
-							<img src="images/Service1.png">
-						</dt>
-						<dd>
-							<strong>QQ客服1</strong>
-							<p class="p1">9:00-22:00</p>
-							<p class="p2">
-								<a
-									href="http://wpa.qq.com/msgrd?v=3&amp;uin=123456&amp;site=DGG三端同步&amp;menu=yes">点击交谈</a>
-							</p>
-						</dd>
-					</dl>
-				</div></li>
-			<li class="fixeBoxLi code cart_bd " style="display: block;"
-				id="cartboxs"><span class="fixeBoxSpan"></span> <strong>微信</strong>
-				<div class="cartBox">
-					<div class="bjfff"></div>
-					<div class="QR_code">
-						<p>
-							<img src="images/erweim.jpg" width="150px" height="150px"
-								style="margin-top: 10px;" />
-						</p>
-						<p>微信扫一扫，关注我们</p>
-					</div>
-				</div></li>
+<script type="text/javascript">
 
-			<li class="fixeBoxLi Home"><a href="./"> <span
-					class="fixeBoxSpan"></span> <strong>收藏</strong>
-			</a></li>
-			<li class="fixeBoxLi BackToTop"><span class="fixeBoxSpan"></span>
-				<strong>返回顶部</strong></li>
-		</ul>
-	</div>
+$(function(){
+	   $(".addCar").click(function(){
+		   var id = $("#id").val();
+		   var num = $("#t_a").val();
+		   var s = "${ctx}/car/exAdd?itemId="+id+"&num="+num;
+		   $.ajax({  
+            type : "POST",  //提交方式  
+            url : "${ctx}/car/exAdd?itemId="+id+"&num="+num,//路径  
+            success : function(result) {//返回数据根据结果进行相应的处理  
+            	var re = JSON.parse(result)
+            	if (re.res == 0){
+            		alert("请登陆");
+            		window.location.href = "${ctx}/login/uLogin";
+            	}else{
+            		window.location.href = "${ctx}/car/findBySql";
+            	}
+            }  
+        }); 
+		   /*  window.location.href = "${ctx}/car/exAdd?itemId="+id+"&num="+num; */
+	   });
+	   
+	   //直接提交
+	   $(".buy-now").click(function(){
+		   var id = $("#id").val();
+		   var num = $(".count-input").val();
+		   var s = "${ctx}/car/js2?itemId="+id+"&num="+num;
+		   $.ajax({  
+            type : "POST",  //提交方式  
+            url : "${ctx}/car/js2?itemId="+id+"&num="+num,//路径  
+            success : function(result) {//返回数据根据结果进行相应的处理  
+            	var re = JSON.parse(result)
+            	if (re.res == 0){
+            		alert("请登陆");
+            		window.location.href = "${ctx}/login/uLogin";
+            	}else{
+            		window.location.href = "${ctx}/car/view";
+            	}
+            }  
+        }); 
+		   /*  window.location.href = "${ctx}/car/exAdd?itemId="+id+"&num="+num; */
+	   });
+});
+</script>
 </body>
 </html>
