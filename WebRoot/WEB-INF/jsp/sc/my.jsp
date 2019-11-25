@@ -48,24 +48,18 @@
 							<c:forEach items="${pagers.datas}" var="data" varStatus="l">
 								<li>
 									<div class="Collect_pro_name">
-										<a href="#" class="delete_Collect"></a>
+										<a href="${ctx}/sc/delete?id=${data.id}" class="delete_Collect"></a>
 										<p class="img center">
 											<a href="${ctx}/item/view?id=${data.itemId}"><img src="${data.item.url1}" /></a>
 										</p>
 										<p>
 											<a href="${ctx}/item/view?id=${data.itemId}">${data.item.name}</a>
 										</p>
-										<!-- <p class="Collect_Standard">礼盒装</p> -->
 										<p class="Collect_price">￥${data.item.price}</p>
 									</div>
 								</li>
 							</c:forEach>
 						</ul>
-						<!--分页-->
-						<div class="pages_Collect clearfix">
-							<a href="#" class="on">《</a> <a href="#">1</a> <a href="#">2</a>
-							<a href="#">3</a> <a href="#">4</a> <a href="#">》</a>
-						</div>
 					</div>
 				</div>
 			</div>
