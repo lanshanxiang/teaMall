@@ -87,12 +87,34 @@ public class LoginController  extends BaseController{
 		return "login/res";
 	}
 	
+	/**
+	 * 折扣商品
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/toZksList")
+	public String toZksList(Model model){
+		List<Item> zksList = itemService.listBySqlReturnEntity("SELECT * FROM item WHERE 1=1 and isDelete =0 and zk is not null order by zk desc");
+		model.addAttribute("zksList",zksList);
+		return "item/zksshoplist";
+	}
+	
 	@RequestMapping("/toRes")
 	public String toRes(User u){
 		userService.insert(u);
 		return "login/uLogin";
 	}
-	
+	/**
+	 * 热销商品全部列表
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/toRxsList")
+	public String toRxsList(Model model){
+		List<Item> rxsList = itemService.listBySqlReturnEntity("SELECT * FROM item WHERE 1=1 and isDelete =0 order by gmNum desc");
+		model.addAttribute("rxsList",rxsList);
+		return "item/rxsshoplist";
+	}
 	
 	
 	@RequestMapping("/uIndex")
@@ -118,26 +140,20 @@ public class LoginController  extends BaseController{
 			System.out.println("====================================================");
 			model.addAttribute("lbs",list);
 		}
-		//在redis中查询所有分类
+
+	
+		//热销10条
+		List<Item> listBySqlReturnEntity = itemService.listBySqlReturnEntity("SELECT * FROM item WHERE 1=1 and isDelete =0 order by gmNum desc limit 10");
+		model.addAttribute("rxs",listBySqlReturnEntity);
+		//所有热销商品
+		List<Item> rxsList = itemService.listBySqlReturnEntity("SELECT * FROM item WHERE 1=1 and isDelete =0 order by gmNum desc");
+		model.addAttribute("rxsList",rxsList);
 		
-		/*String string = RedisUtil.getJedis().get("lbs");
-		
-		List<CategoryDto> parseArray = JSONArray.parseArray(string, CategoryDto.class);
-		
-		System.out.println(JSONObject.toJSONString(parseArray));
-		
-		model.addAttribute("lbs",parseArray);*/
-		
-		// 1-500
+		//折扣10条
+		List<Item> zks = itemService.listBySqlReturnEntity("SELECT * FROM item WHERE 1=1 and isDelete =0 and zk is not null order by zk desc limit 10");
+		model.addAttribute("zks",zks);
 		
 	
-		//热销
-		List<Item> listBySqlReturnEntity = itemService.listBySqlReturnEntity("SELECT * FROM item WHERE 1=1 and isDelete =0 order by gmNum desc limit 0,10");
-		model.addAttribute("rxs",listBySqlReturnEntity);
-		
-		//折扣
-		List<Item> zks = itemService.listBySqlReturnEntity("SELECT * FROM item WHERE 1=1 and isDelete =0 and zk is not null order by zk desc limit 0,10");
-		model.addAttribute("zks",zks);
 		
 		//做推荐
 		Object attribute = request.getSession().getAttribute("userId");

@@ -49,9 +49,9 @@
 			<div class="Navigation" id="Navigation">
 				<ul class="Navigation_name">
 					<li><a class="nav_on" id="mynav1" href="${ctx}/login/uIndex"><span>首页</span></a></li>
-					<li><a class="nav_on" id="mynav2" href="#"><span>武夷岩茶</span></a></li>
-					<li><a class="nav_on" id="mynav3" href="#"><span>龙井</span></a></li>
-					<li><a class="nav_on" id="mynav4" href="#"><span>正山小种</span></a></li>
+					<li><a class="nav_on" id="mynav2" href="${ctx}/item/shoplist?categoryIdTwo=72"><span>武夷岩茶</span></a></li>
+					<li><a class="nav_on" id="mynav3" href="${ctx}/item/shoplist?categoryIdTwo=76"><span>龙井</span></a></li>
+					<li><a class="nav_on" id="mynav4" href="${ctx}/item/shoplist?categoryIdTwo=77"><span>正山小种</span></a></li>
 				</ul>
 			</div>
 			<script>
@@ -100,7 +100,7 @@
 						<em class="icon_title"></em>限时促销
 					</div>
 					<div class="right">
-						<span class="more"><a href="#">更多《</a></span>
+						<span class="more"><a href="${ctx}/login/toZksList">更多《</a></span>
 					</div>
 				</div>
 				<div class="Area_list clearfix">
@@ -111,7 +111,7 @@
 					</div>
 					<div class="Area_p_list">
 						<ul id="xianPage">
-							<%-- <c:forEach items="${zks}" var="data" varStatus="l">
+							<c:forEach items="${zks}" var="data" varStatus="l">
 								<li class="s_Products">
 									<div class="Area_product_c">
 										<div class="img center">
@@ -127,7 +127,7 @@
 										</div>
 									</div>
 								</li>
-							</c:forEach> --%>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
@@ -139,7 +139,7 @@
 						<em class="icon_title"></em>热门商品
 					</div>
 					<div class="right">
-						<span class="more"><a href="#">更多《</a></span>
+						<span class="more"><a href="${ctx}/login/toResList">更多《</a></span>
 					</div>
 				</div>
 				<div class="Area_list clearfix">
@@ -175,9 +175,6 @@
 				<div class="Area_title">
 					<div class="name">
 						<em class="icon_title"></em>推荐商品
-					</div>
-					<div class="right">
-						<span class="more"><a href="#">更多《</a></span>
 					</div>
 				</div>
 				<div class="Area_list clearfix">
