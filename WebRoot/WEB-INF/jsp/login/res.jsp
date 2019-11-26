@@ -85,7 +85,7 @@
 								<input type="submit" value="注册" class="btn_rgister" style="border: 0">
 							</div>
 							<div class="Note">
-								<span class="login_link">已是会员<a href="login.html">请登录</a></span>
+								<span class="login_link">已是会员<a href="${ctx}/login/uLogin">请登录</a></span>
 							</div>
 						</form>
 					</ul>
