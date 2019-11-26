@@ -185,7 +185,15 @@ public abstract  class BaseServiceImpl<T> implements BaseService<T>{
 		Pager<T> pages = new Pager<T>(this.getBaseDao().findByEntity(entity));
     	return pages;
     }
+    
+    
 
+
+	@Override
+	public Pager<T> page(int pageNum, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	/**
 	 * 批量新增

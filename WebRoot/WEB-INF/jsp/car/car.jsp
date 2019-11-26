@@ -172,7 +172,8 @@
 						<c:forEach items="${list}" var="data" varStatus="l">
 							<tr class="tr">
 								<td class="checkbox xzWxz"><input name="checkitems"
-									type="checkbox" value="${data.item.name}" class="xzWxz"/></td>
+									type="checkbox" value="${data.item.name}" class="xzWxz"/>
+									<input class="carId" type="hidden" value="${data.id}" /></td>
 								<td class="name">
 									<div class="img">
 										<a href="#"><img src="${data.item.url1}" /></a>
@@ -181,13 +182,13 @@
 										<a href="#">${data.item.name}</a>
 									</div>
 								</td>
-								<td class="scj sp xzJg"><font>${data.price}</font></td>
+								<td class="scj sp xzJg"><font class="xzPrice" >${data.price}</font></td>
 								<td class="bgj sp"></td>
 								<td class="sl xzSl">
 									<div class="Numbers xzSlIn">
 										<a href="javascript:void(0);" onclick="updatenum('del');"
 											class="jian Amin">-</a> <input id="number" name="number"
-											type="text" value="${data.num}" class="number_text cOnt">
+											type="text" value="${data.num}" class="number_text cOnt xzNum">
 											<a href="javascript:void(0);" onclick="zj(this)"
 											class="jia Aadd">+</a>
 									</div>
@@ -493,16 +494,25 @@
 				//			//alert(price +"----" + num);
 				//			total += price*num;
 				//		}
-				$(".xzWxz.on").each(
+				/* $(".xzWxz.on").each(
 						function() {
-							var price = $(this).parent().find(".xzJg").find(
-									"font").html();
+							var price = $(this).parent().find(".xzPrice").html();
 							var num = $(this).parent().find(".xzSl").find(
 									"input").val();
-							//alert(price +"----" + num);
+							alert(price +"----" + num);
 							total += price * num;
-						});
-
+						}); */
+						var priceAll=0;
+						$(".xzPrice").each(
+								function() {
+									priceAll = parseFloat(priceAll+$(this).html());
+								});
+						var numAll=0;
+						$(".xzNum").each(
+								function() {
+									numAll = parseInt(numAll+$(this).val());
+								});
+						total = priceAll*numAll;
 				//alert(total);
 				$("#zjJg").html(sswr(total));
 
@@ -513,7 +523,7 @@
 				var arr = new Array();
 				$(".xzWxz.on").each(
 						function() {
-							var $id = $(this).parent().attr("data-id");
+							var $id = $(this).parent().find(".carId").val();
 							var $num = $(this).parent().find(".xzSl").find(
 									"input").val();
 							var obj = new Object();

@@ -609,9 +609,11 @@ public class ItemOrderController extends BaseController {
 		
 		double to = 0.0;
 		for (CarDto c : list){
-			ids.add(c.getId());
-			Car load = carService.load(c.getId());
-			to += load.getPrice()*c.getNum();
+			if(c.getId()!=null && c.getNum()!=null) {
+				ids.add(c.getId());
+				Car load = carService.load(c.getId());
+				to += load.getPrice()*c.getNum();
+			}
 		}
 		ItemOrder order= new ItemOrder();
 		order.setStatus(-1);
@@ -624,24 +626,26 @@ public class ItemOrderController extends BaseController {
 		//删除购车
 		if (!CollectionUtils.isEmpty(ids)){
 			for (CarDto c : list){
-				Car load = carService.load(c.getId());
-				OrderDetail de = new OrderDetail();
-				de.setItemId(load.getItemId());
-				de.setOrderId(order.getId());
-				de.setStatus(0);
-				de.setNum(c.getNum());
-				de.setTotal(String.valueOf(c.getNum()*c.getNum()));
-				orderDetailService.insert(de);
-				//修改成交数
-				Item load2 = itemService.load(load.getItemId());
-				load2.setGmNum(load2.getGmNum()+c.getNum());
-				itemService.updateById(load2);
-				carService.deleteById(c.getId());
+				if(c.getId()!=null && c.getNum()!=null) {
+					Car load = carService.load(c.getId());
+					OrderDetail de = new OrderDetail();
+					de.setItemId(load.getItemId());
+					de.setOrderId(order.getId());
+					de.setStatus(0);
+					de.setNum(c.getNum());
+					de.setTotal(String.valueOf(c.getNum()*c.getNum()));
+					orderDetailService.insert(de);
+					//修改成交数
+					Item load2 = itemService.load(load.getItemId());
+					load2.setGmNum(load2.getGmNum()+c.getNum());
+					itemService.updateById(load2);
+					carService.deleteById(c.getId());
+				}
 			}
 		}
 		js.put("res", 1);
 		js.put("id", order.getId());
-		js.put("code", order.getCode());
+		/*js.put("code", order.getCode());*/
 		return js.toJSONString();
 	}
 	private static String date ;

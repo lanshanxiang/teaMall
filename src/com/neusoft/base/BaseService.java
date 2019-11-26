@@ -112,6 +112,7 @@ public interface BaseService<T> {
      * @return
      */
     public Pager<T> findByEntity(T entity);
+    public Pager<T> page(int pageNum,int pageSize);
     
     /**
      * 批量新增

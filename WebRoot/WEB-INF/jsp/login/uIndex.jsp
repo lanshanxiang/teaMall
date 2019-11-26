@@ -16,6 +16,8 @@
 <script src="${ctx}/resource/users/js/common_js.js"
 	type="text/javascript"></script>
 <script src="${ctx}/resource/users/js/footer.js" type="text/javascript"></script>
+<script type="text/javascript" src="${ctx}/resource/js/layer/layer.js"></script>
+<script type="text/javascript" src="${ctx}/resource/js/layui/layui.js"></script>
 <title>茶叶商城首页</title>
 </head>
 
@@ -108,8 +110,8 @@
 							src="${ctx}/resource/users/images/AD-03.jpg" /></a>
 					</div>
 					<div class="Area_p_list">
-						<ul>
-							<c:forEach items="${zks}" var="data" varStatus="l">
+						<ul id="xianPage">
+							<%-- <c:forEach items="${zks}" var="data" varStatus="l">
 								<li class="s_Products">
 									<div class="Area_product_c">
 										<div class="img center">
@@ -125,7 +127,7 @@
 										</div>
 									</div>
 								</li>
-							</c:forEach>
+							</c:forEach> --%>
 						</ul>
 					</div>
 				</div>
@@ -270,4 +272,73 @@
 		<!--底部样式-->
 		<%@ include file="/common/udown.jsp"%>
 </body>
+<script type="text/javascript">
+layui.use('flow', function() {
+    var flow = layui.flow;
+    var limit = 10;//每页的记录条数
+    var total;//总记录数
+    var pageTotal;//总分页的页数
+    var list=[];
+    flow.lazyimg();
+    flow.load({
+        elem: '#demo' //流加载容器
+        , scrollElem: '#demo'
+        , done: function (page, next) { //执行下一页的回调
+            var t={};
+            if(${user==null}){
+                t={
+                    pageNum: page,
+                    pageSize: limit,
+                    condition: {
+                        status: 0
+                    }
+                }
+            }else{
+                t={
+                    pageNum: page,
+                    pageSize: limit,
+                    condition: {
+                        status: 0,
+                        userId: '${user.id}'+""
+                    }
+                }
+            }
+            $.ajax({
+                type: "POST",
+                url: "/api/goods/page",
+                data: t,
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    var lis=[];
+                    totalitem = data.data.size;
+                    total = data.data.totalElements;
+                    pageTotal = Math.ceil((total / limit));
+                    layui.each(data.data.content, function (index, item) {
+                        console.log(item.collection);
+                        var text="";
+                        text += "<div class=\"list-item\">";
+                        text += "                    <a href=\"../goods/detail?id="+item.id+"\"><img width='230px' height='190px' src=\""+item.mainImage+"\"><\/a>";
+                        text += "                    <p style='height: 15px;'>"+item.goodsName+"<\/p>";
+                        if(!item.collection){
+                            text += "<button type=\"button\" onclick='collectionAdd(\""+item.id+"\")' style=\"float: left\"  class=\"layui-btn layui-btn-primary layui-btn-sm\"><i class=\"layui-icon\"></i></button>";
+                        }else{
+                            text += "<button type=\"button\" onclick='collectionAdd(\""+item.id+"\")' style=\"float: left\"  class=\"layui-btn layui-btn-normal layui-btn-sm\"><i class=\"layui-icon\"></i></button>";
+                        }
+
+                        text += "                    <span>￥"+item.price+"<\/span>";
+
+                        text += "                <\/div>";
+                        $(".product-item-box").append(text);
+                    });
+                    next(list.join(''), page < pageTotal);
+                },
+                error: function (err) {
+                    console.log("err=", err)
+                }
+            });
+        }
+        });
+   });
+</script>
 </html>
